@@ -5,17 +5,17 @@ from .forms import BookForm, AuthorForm, CategoryForm
 
 class CategoryAdmin(admin.ModelAdmin):
     form=BookForm
-    list_display=('name','user')
+    list_display=('name',)
     search_fields=('name',)
 
 class AuthorAdmin(admin.ModelAdmin):
     form=AuthorForm
-    list_display=('name','user')
+    list_display=('name',)
     search_fields=('name',)
 
 class CategoryAdmin(admin.ModelAdmin):
     form=CategoryForm
-    list_display=('name','user')
+    list_display=('name',)
     search_fields=('name',)
 
 
