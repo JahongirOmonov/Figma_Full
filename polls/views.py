@@ -170,3 +170,10 @@ class getCategoryIDAuthor(APIView):
             all=AuthorModel.objects.filter(category=kwargs['forid'])
             serializer = AuthorSerializer(all, many=True)
             return Response(serializer.data)
+from django.http import HttpResponse
+def details(request, slug):
+  mymember = BookModel.objects.get(slug=slug)
+  context = {
+    'mymember': mymember,
+  }
+  return HttpResponse(render(context, request))

@@ -7,16 +7,21 @@ class CategoryAdmin(admin.ModelAdmin):
     form=BookForm
     list_display=('name',)
     search_fields=('name',)
+    prepopulated_fields={"slug":("name")}
 
 class AuthorAdmin(admin.ModelAdmin):
     form=AuthorForm
     list_display=('name',)
     search_fields=('name',)
+    prepopulated_fields={"slug":("name")}
+
 
 class CategoryAdmin(admin.ModelAdmin):
     form=CategoryForm
     list_display=('name',)
     search_fields=('name',)
+    prepopulated_fields={"slug":("name")}
+
 
 
 # Register your models here.

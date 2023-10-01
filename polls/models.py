@@ -23,6 +23,8 @@ class AuthorModel(models.Model):
     description=models.TextField()
     category=models.ForeignKey(CategoryModel,on_delete=models.CASCADE)
     user=models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    slug=models.SlugField(max_length=40,null=False)
+
     
     class Meta:
         db_table='author'
@@ -40,6 +42,7 @@ class BookModel(models.Model):
     author=models.ForeignKey(AuthorModel, on_delete=models.CASCADE)
     category=models.ForeignKey(CategoryModel,on_delete=models.CASCADE)
     user=models.ForeignKey(CustomUser, on_delete=models.CASCADE, default=1)
+    slug=models.SlugField(max_length=40,null=False)
 
     class Meta:
         db_table='book'

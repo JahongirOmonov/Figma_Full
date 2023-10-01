@@ -14,7 +14,7 @@ class BookForm(forms.ModelForm):
 
     class Meta:
         model=BookModel
-        exclude=('name', 'description')
+        exclude=('name', )
 
 class CategoryForm(forms.ModelForm):
     name_uz=forms.CharField()

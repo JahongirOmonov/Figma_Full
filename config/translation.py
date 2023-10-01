@@ -3,7 +3,7 @@ from polls.models import BookModel, AuthorModel, CategoryModel
 
 class BookTranslationOptions(TranslationOptions):
     fields = ('name', 'description')
-    required_languages = ('uz',)
+    required_languages = ('uz','description')
 
 
 translator.register(BookModel, BookTranslationOptions)
